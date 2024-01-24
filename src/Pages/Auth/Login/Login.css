@@ -1,0 +1,210 @@
+.Login {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	width: 1500px;
+	height: 750px;
+}
+.Login-content {
+	width: 1200px;
+	height: 500px;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	background: rgb(52, 141, 255);
+	background: linear-gradient(
+		90deg,
+		rgba(52, 141, 255, 1) 20%,
+		rgba(167, 223, 255, 1) 100%
+	);
+	border-radius: 15px;
+}
+.Login-content-form {
+	width: 600px;
+	height: 300px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+.Login-content-form-title h2 {
+	font-size: 36px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	color: white;
+}
+.Login-content-form-email {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	padding: 4px 14px 4px 10px;
+	background-color: white;
+}
+.Login-content-form-email img {
+	width: 25px;
+	padding: 0 8px 0 0;
+}
+.Login-content-form-email input {
+	border: none;
+	outline: none;
+	font-family: 'Mulish';
+	width: 220px;
+	font-size: 17px;
+}
+.Login-content-form-password {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	padding: 4px 14px 4px 10px;
+	background-color: white;
+	position: relative;
+}
+.Login-content-form-password img {
+	width: 25px;
+	padding: 0 8px 0 0;
+}
+.Login-content-form-password input {
+	border: none;
+	outline: none;
+	font-family: 'Mulish';
+	width: 220px;
+	font-size: 17px;
+}
+.Login-content-form-password #Login-eye {
+	width: 28px;
+	position: absolute;
+	right: 2px;
+	cursor: pointer;
+}
+.Login-content-form-login {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+.Login-content-form-login button {
+	color: white;
+	background-color: #2046ec;
+	font-size: 17px;
+	font-weight: bold;
+	font-family: 'Montserrat';
+	width: 275px;
+	border-radius: 5px;
+	padding: 8px 0;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.Login-content-form-login button:hover {
+	background-color: #1d41df;
+}
+.Login-content-form-login button:active {
+	background-color: #1338db;
+}
+.Login-content-form #Login-or {
+	color: white;
+	text-transform: lowercase;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	color: white;
+	position: relative;
+}
+.Login-content-form #Login-or:before {
+	content: '';
+	width: 110px;
+	height: 1px;
+	background-color: white;
+	position: absolute;
+	left: -120px;
+	top: 10px;
+}
+.Login-content-form #Login-or:after {
+	content: '';
+	width: 110px;
+	height: 1px;
+	background-color: white;
+	position: absolute;
+	right: -120px;
+	top: 10px;
+}
+.Login-content-form-register {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+.Login-content-form-register a {
+	color: white;
+	background-color: rgb(15, 204, 25);
+	font-size: 17px;
+	font-weight: bold;
+	font-family: 'Montserrat';
+	border-radius: 5px;
+	padding: 8px 42px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.Login-content-form-register a:hover {
+	background-color: rgb(18, 212, 28);
+}
+.Login-content-form-register a:active {
+	background-color: rgb(47, 214, 56);
+}
+.Login-content-art {
+	width: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+}
+.Login-content-art #rocket {
+	width: 300px;
+	position: relative;
+	right: 40px;
+	z-index: 5;
+}
+.Login-content-art #fire {
+  width: 110px;
+  position: absolute;
+  transform: rotate(180deg);
+  bottom: -100px;
+  left: 205px;
+}
+.Login-content-art #sky-1 {
+  width: 110px;
+  position: absolute;
+  bottom: 35px;
+  right: 190px;
+  transform: scale(-1, 1);
+}
+.Login-content-art #sky-2 {
+  width: 160px;
+  position: absolute;
+  top: -10px;
+  left: 62px;
+  z-index: 10;
+}
+.Login-content-art #sky-3 {
+  width: 90px;
+  position: absolute;
+  top: -25px;
+  right: 155px;
+  z-index: 10;
+}
+.Login-content-art #cosmonaut {
+  width: 100px;
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+}

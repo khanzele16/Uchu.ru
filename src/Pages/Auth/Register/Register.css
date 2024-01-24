@@ -1,0 +1,277 @@
+.Register {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	width: 1500px;
+	height: 750px;
+}
+.Register-content {
+	width: 1200px;
+	height: 500px;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	background: rgb(52, 141, 255);
+	background: linear-gradient(
+		90deg,
+		rgba(52, 141, 255, 1) 20%,
+		rgba(167, 223, 255, 1) 100%
+	);
+	border-radius: 15px;
+}
+.Register-content-form {
+	width: 600px;
+	height: 400px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+.Register-content-form-title h2 {
+	font-size: 36px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	color: white;
+}
+.Register-content-form-email {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	padding: 4px 14px 4px 10px;
+	background-color: white;
+	position: relative;
+}
+.Register-content-form-email img {
+	width: 25px;
+	padding: 0 8px 0 0;
+}
+.Register-content-form-email input {
+	border: none;
+	outline: none;
+	font-family: 'Montserrat';
+	font-size: 16px;
+}
+.Register-content-form-fio {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	padding: 5px 14px 5px 10px;
+	background-color: white;
+	position: relative;
+}
+.Register-content-form-fio img {
+	width: 22px;
+	padding: 0 12px 0 0;
+}
+.Register-content-form-fio input {
+	border: none;
+	outline: none;
+	font-family: 'Montserrat';
+	font-size: 16px;
+}
+.Register-content-form-password {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	padding: 4px 14px 4px 10px;
+	background-color: white;
+	position: relative;
+}
+.Register-content-form-password img {
+	width: 25px;
+	padding: 0 8px 0 0;
+}
+.Register-content-form-password input {
+	border: none;
+	outline: none;
+	font-family: 'Montserrat';
+	font-size: 16px;
+}
+.Register-content-form-status {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 277px;
+	height: 38px;
+	border-radius: 5px;
+	background-color: rgb(240, 240, 240);
+}
+.Register-content-form-status li {
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-size: 16px;
+	margin: 0 auto;
+	cursor: pointer;
+	padding: 4px 30px;
+	transition: all 0.2s ease;
+	border-radius: 2px;
+}
+.Register-content-form-status .active-status {
+	background-color: rgb(253, 253, 253);
+	box-shadow: 0 0 2px 0 rgb(65, 65, 65);
+}
+.Register-content-form-register {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+.Register-content-form-register button {
+	color: white;
+	background-color: rgb(15, 204, 25);
+	font-size: 17px;
+	font-weight: bold;
+	font-family: 'Montserrat';
+	width: 275px;
+	border-radius: 5px;
+	padding: 8px 0;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.Register-content-form-register button:hover {
+	background-color: rgb(18, 212, 28);
+}
+.Register-content-form-register button:active {
+	background-color: rgb(47, 214, 56);
+}
+.Register-content-form #Register-or {
+	color: white;
+	text-transform: lowercase;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	color: white;
+	position: relative;
+}
+.Register-content-form #Register-or:before {
+	content: '';
+	width: 110px;
+	height: 1px;
+	background-color: white;
+	position: absolute;
+	left: -120px;
+	top: 10px;
+}
+.Register-content-form #Register-or:after {
+	content: '';
+	width: 110px;
+	height: 1px;
+	background-color: white;
+	position: absolute;
+	right: -120px;
+	top: 10px;
+}
+.Register-content-form-login {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+.Register-content-form-login a {
+	color: white;
+	background-color: #2046ec;
+	font-size: 17px;
+	font-weight: bold;
+	font-family: 'Montserrat';
+	border-radius: 5px;
+	padding: 8px 109px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.Register-content-form-login a:hover {
+	background-color: #1d41df;
+}
+.Register-content-form-login a:active {
+	background-color: #1338db;
+}
+.Register-content-art {
+	width: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+}
+.Register-content-art #rocket {
+	width: 300px;
+	position: relative;
+	right: -45px;
+	top: 30px;
+	z-index: 5;
+}
+.Register-content-art #floor {
+	width: 400px;
+	height: 70px;
+	background-color: #444444;
+	position: absolute;
+	bottom: -100px;
+	left: 125px;
+}
+.Register-content-art #tools {
+	width: 80px;
+	position: absolute;
+	z-index: 10;
+	bottom: -33px;
+	left: 195px;
+}
+.Register-content-art #sun {
+	width: 150px;
+	position: absolute;
+	top: -40px;
+	left: 10px;
+}
+.Register-email-errors {
+	color: red;
+	font-size: 14px;
+	font-family: 'Montserrat';
+	background-color: white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: absolute;
+	padding: 5px 8px;
+	right: -135px;
+	border: 1px solid #929292;
+}
+.Register-fio-errors {
+	color: red;
+	font-size: 14px;
+	font-family: 'Montserrat';
+	background-color: white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: absolute;
+	padding: 5px 8px;
+	right: -170px;
+	border: 1px solid #929292;
+}
+.Register-password-errors {
+	color: red;
+	font-size: 11px;
+	width: 300px;
+	font-family: 'Montserrat';
+	background-color: white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: absolute;
+	padding: 5px 8px;
+	right: -325px;
+	border: 1px solid #929292;
+}

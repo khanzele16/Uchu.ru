@@ -1,0 +1,14 @@
+.ABanner {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 1500px;
+	height: 129px;
+}
+.ABanner-content p {
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: bold;
+}

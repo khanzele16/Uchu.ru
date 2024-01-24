@@ -1,0 +1,66 @@
+.Emulator {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	margin: 0 auto;
+}
+.Emulator-header {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+	background-color: #4869ff;
+}
+.Emulator-header-title h1 {
+	font-weight: bold;
+	font-family: 'Montserrat';
+	font-size: 40px;
+	color: #ffffff;
+}
+.Emulator-header-title h1 span {
+	color: rgb(0, 230, 0);
+}
+.Emulator-header-menu {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+.Emulator-header-menu p {
+	font-family: 'Mulish';
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	position: relative;
+}
+.Emulator-header-menu p:after {
+	content: '';
+	width: 2px;
+	height: 60px;
+	background-color: rgba(204, 204, 204, 0.87);
+	position: absolute;
+	top: -20px;
+	right: -12px;
+}
+.Emulator-header-menu button {
+	background-color: rgb(255, 30, 30);
+	padding: 3px 6px;
+	color: white;
+	font-size: 17px;
+	font-family: 'Mulish';
+	font-weight: bold;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	margin: 0 0 0 25px;
+	cursor: pointer;
+}
+.Emulator-header-menu button:hover {
+	background-color: rgb(255, 80, 80);
+}

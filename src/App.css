@@ -1,0 +1,63 @@
+body {
+	background: url('https://bogatyr.club/uploads/posts/2023-01/1674790400_bogatyr-club-p-sinii-fon-blyur-fon-instagram-56.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+* {
+	font-family: 'Mulish';
+	list-style-type: none;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+}
+.App {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1800px;
+	margin: 0 auto;
+}
+.App-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	height: 900px;
+}
+.App-content-panel {
+	max-width: 300px;
+	height: 900px;
+	border-right: 1px solid #bebebe;
+}
+.App-content-inner {
+	max-width: 1500px;
+}
+.App-content-inner-main {
+	background-color: white;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 770px;
+	word-break: normal;
+}
+.App-content-inner-main::-webkit-scrollbar {
+	width: 5px;
+}
+.App-content-inner-main::-webkit-scrollbar-track {
+	background: rgb(204, 204, 204);
+}
+.App-content-inner-main::-webkit-scrollbar-thumb {
+	background-color: #4866eb;
+}
+.App-content-inner-banner {
+	max-height: 129px;
+	border-top: 1px solid #bebebe;
+}
+/*
+Белая 1 - https://bogatyr.club/uploads/posts/2023-01/1674790400_bogatyr-club-p-sinii-fon-blyur-fon-instagram-56.jpg
+Белая 2 - https://sdelatsamkak.ru/wp-content/uploads/1/a/3/1a33f2d8dec114ff5a2f0771d9d14b4a.jpeg
+Белая 3 - https://static.tildacdn.com/tild6239-3162-4137-a239-656163633333/14979252_SL_060521_4.jpg
+*/
