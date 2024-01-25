@@ -14,6 +14,21 @@ import Login from './Pages/Auth/Login/Login.jsx'
 import Register from './Pages/Auth/Register/Register.jsx'
 import { Toaster } from 'react-hot-toast'
 
+const Routers = [
+	{
+		path: '/kege',
+		element: <KEGE />,
+	},
+	{
+		path: '/blog',
+		element: <Blog />,
+	},
+	{
+		path: '/blog/:id',
+		element: <FullPost />,
+	},
+]
+
 function App() {
 	const resultRouters = []
 	const isLocale = useSelector(state => state.cookie.isLocale)

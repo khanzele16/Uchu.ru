@@ -23,7 +23,7 @@
 }
 .Register-content-form {
 	width: 600px;
-	height: 400px;
+	height: 440px;
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -99,6 +99,31 @@
 	font-family: 'Montserrat';
 	font-size: 16px;
 }
+.Register-content-form-gender {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 277px;
+	height: 38px;
+	border-radius: 3px;
+	background-color: rgb(240, 240, 240);
+}
+.Register-content-form-gender li {
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-size: 16px;
+	margin: 0 auto;
+	cursor: pointer;
+	padding: 5px 25px;
+	border-radius: 2px;
+	transition: all 0.2s ease;
+}
+.Register-content-form-gender .active-gender {
+	background-color: rgb(253, 253, 253);
+	box-shadow: 0 0 2px 0 rgb(65, 65, 65);
+}
 .Register-content-form-status {
 	display: flex;
 	justify-content: space-evenly;
@@ -107,7 +132,7 @@
 	flex-direction: row;
 	width: 277px;
 	height: 38px;
-	border-radius: 5px;
+	border-radius: 3px;
 	background-color: rgb(240, 240, 240);
 }
 .Register-content-form-status li {
@@ -116,7 +141,7 @@
 	font-size: 16px;
 	margin: 0 auto;
 	cursor: pointer;
-	padding: 4px 30px;
+	padding: 5px 31px;
 	transition: all 0.2s ease;
 	border-radius: 2px;
 }
@@ -226,8 +251,8 @@
 	width: 80px;
 	position: absolute;
 	z-index: 10;
-	bottom: -33px;
-	left: 195px;
+	bottom: -30px;
+	left: 170px;
 }
 .Register-content-art #sun {
 	width: 150px;

@@ -16,6 +16,21 @@ function Login() {
 	const dispatch = useDispatch()
 	const onSubmit = async data => {
 		const user = await dispatch(loginUser(data))
+		if (!user.payload) {
+			return toast.error('Не удалось авторизоваться')
+		} else {
+			if (user.payload.token) {
+				window.localStorage.setItem('token', user.payload.token)
+				toast.success(
+					`Вы успешно авторизовались как ${
+						user.payload._doc.fio.split(' ')[0]
+					} ${user.payload._doc.fio.split(' ')[1]}`
+				)
+				return <Navigate to='/kege' />
+			} else {
+				return toast.error('Не удалось авторизоваться')
+			}
+		}
 	}
 
 	return (
@@ -55,8 +70,8 @@ function Login() {
 							onClick={() => setIsShow(!isShow)}
 							src={
 								isShow
-									? 'https://cdn-icons-png.flaticon.com/512/2767/2767146.png'
-									: 'https://cdn-icons-png.flaticon.com/512/709/709612.png'
+									? 'https://cdn-icons-png.flaticon.com/512/709/709612.png'
+									: 'https://cdn-icons-png.flaticon.com/512/2767/2767146.png'
 							}
 							alt=''
 						/>

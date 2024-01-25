@@ -1,25 +1,44 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Navigate } from 'react-router-dom'
 import './Register.css'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import { registerUser } from '../../../Redux/Slices/authSlice'
+import { registerUser, selectorAuth } from '../../../Redux/Slices/authSlice'
 import toast from 'react-hot-toast'
 
 const statusCatalog = ['Ученик', 'Учитель']
+const genderCatalog = ['Мужской', 'Женский']
 
 function Register() {
+	const isAuth = useSelector(selectorAuth)
 	const [isStatus, setIsStatus] = React.useState('Ученик')
+	const [isGender, setIsGender] = React.useState('Мужской')
 	const dispatch = useDispatch()
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
 	} = useForm()
-	// const onSubmit = async data => {
-	// 	const user = await dispatch(registerUser({ ...data, status: isStatus }))
-	// 	console.log(user)
-	// }
+	const onSubmit = async data => {
+		const user = await dispatch(
+			registerUser({ status: isStatus, gender: isGender, data })
+		)
+		if (!user.payload) {
+			return toast.error('Не удалось зарегистрироваться')
+		} else {
+			if (user.payload.token) {
+				window.localStorage.setItem('token', user.payload.token)
+				return toast.success(
+					`Вы зарегистрировались, ${user.payload.fio.split(' ')[0]} ${
+						user.payload.fio.split(' ')[1]
+					}`
+				)
+			} else {
+				return toast.error('Не удалось зарегистрироваться')
+			}
+		}
+	}
+
 	return (
 		<div className='Register'>
 			<div className='Register-content'>
@@ -90,6 +109,17 @@ function Register() {
 							</div>
 						)}
 					</div>
+					<ul className='Register-content-form-gender'>
+						{genderCatalog.map((el, index) => (
+							<li
+								onClick={() => setIsGender(el)}
+								className={isGender == el ? 'active-gender' : ''}
+								key={index}
+							>
+								{el}
+							</li>
+						))}
+					</ul>
 					<ul className='Register-content-form-status'>
 						{statusCatalog.map((el, index) => (
 							<li
@@ -118,7 +148,7 @@ function Register() {
 					<div id='floor'></div>
 					<img
 						id='tools'
-						src='https://cdn-icons-png.flaticon.com/512/2276/2276313.png'
+						src='https://cdn-icons-png.freepik.com/512/5604/5604298.png?ga=GA1.1.2065175142.1706196907&'
 						alt=''
 					/>
 					<img

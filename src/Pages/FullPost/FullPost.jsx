@@ -16,7 +16,7 @@ function FullPost() {
 		<div className='FullPost'>
 			{status == 'loading' ? (
 				<FullPLoading />
-			) : (
+			) : !(postData.length == 0) ? (
 				<>
 					<div className='FullPost-content'>
 						<div className='FullPost-content-info'>
@@ -35,6 +35,11 @@ function FullPost() {
 						</div>
 					</div>
 				</>
+			) : (
+				<div className='FullPost-content-not'>
+					<p id='fpost-error'>404</p>
+					<p>К сожалению пост не был найден...</p>
+				</div>
 			)}
 		</div>
 	)
