@@ -1,20 +1,27 @@
 import React from 'react'
+import FAQ from './Pages/FAQ/FAQ.jsx'
 import KEGE from './Pages/KEGE/KEGE.jsx'
+import Blog from './Pages/Post/Blog/Blog.jsx'
+import Login from './Pages/Auth/Login/Login.jsx'
 import Header from './Components/Header/Header.jsx'
 import APanel from './Components/Ad/APanel/APanel.jsx'
-import Cookies from './Components/Cookies/Cookies.jsx'
+import FullPost from './Pages/Post/FullPost/FullPost.jsx'
 import ABanner from './Components/Ad/ABanner/ABanner.jsx'
-import { useSelector } from 'react-redux'
-import './App.css'
-import { Routes, Route } from 'react-router-dom'
-import Blog from './Pages/Blog/Blog.jsx'
-import FAQ from './Pages/FAQ/FAQ.jsx'
-import FullPost from './Pages/FullPost/FullPost.jsx'
-import Login from './Pages/Auth/Login/Login.jsx'
 import Register from './Pages/Auth/Register/Register.jsx'
+import NotFound from './Pages/Other/NotFound/NotFound.jsx'
+import Cookies from './Components/Other/Cookies/Cookies.jsx'
 import { Toaster } from 'react-hot-toast'
+import { useSelector } from 'react-redux'
+import { Routes, Route } from 'react-router-dom'
+import { selectorAuth } from './Redux/Slices/authSlice.js'
+import './App.css'
+import Vote from './Components/Other/Vote/Vote.jsx'
+import Profile from './Pages/Profile/Profile/Profile.jsx'
+import Edit from './Pages/Profile/Edit/Edit.jsx'
+import Stats from './Pages/Profile/Stats/Stats.jsx'
+import PageLoading from './Pages/Other/PageLoading/PageLoading.jsx'
 
-const Routers = [
+const PageRouters = [
 	{
 		path: '/kege',
 		element: <KEGE />,
@@ -27,14 +34,49 @@ const Routers = [
 		path: '/blog/:id',
 		element: <FullPost />,
 	},
+	{
+		path: '/faq',
+		element: <FAQ />,
+	},
+]
+const ProfileRouters = [
+	{
+		path: '/profile',
+		element: <Profile />,
+	},
+	{
+		path: '/profile/edit',
+		element: <Edit />,
+	},
+	{
+		path: '/profile/stats',
+		element: <Stats />,
+	},
+]
+const AuthRouters = [
+	{
+		path: '/login',
+		element: <Login />,
+	},
+	{
+		path: '/register',
+		element: <Register />,
+	},
 ]
 
 function App() {
-	const resultRouters = []
-	const isLocale = useSelector(state => state.cookie.isLocale)
+	const isCookies = useSelector(state => state.modal.isCookies)
+	const isVote = useSelector(state => state.modal.isVotes)
+	const isAuth = useSelector(selectorAuth)
+	const status = useSelector(state => state.auth.status)
+	const resultRouters = [
+		...PageRouters,
+		...(isAuth ? ProfileRouters : AuthRouters),
+	]
+
 	return (
 		<div className='App'>
-			{!isLocale && <Cookies />}
+			{!isCookies ? <Cookies /> : !isVote ? <Vote /> : <></>}
 			<header className='App-header'>
 				<Header />
 			</header>
@@ -44,14 +86,18 @@ function App() {
 				</div>
 				<div className='App-content-inner'>
 					<div className='App-content-inner-main'>
-						<Routes>
-							<Route path='/kege' element={<KEGE />} />
-							<Route path='/blog' element={<Blog />} />
-							<Route path='/blog/:id' element={<FullPost />} />
-							<Route path='/faq' element={<FAQ />} />
-							<Route path='/login' element={<Login />} />
-							<Route path='/register' element={<Register />} />
-						</Routes>
+						{
+							(status == 'loading' ? (
+								<PageLoading />
+							) : (
+								<Routes>
+									{resultRouters.map((el, index) => (
+										<Route key={index} path={el.path} element={el.element} />
+									))}
+									<Route path='*' element={<NotFound />} />
+								</Routes>
+							))
+						}
 					</div>
 					<div className='App-content-inner-banner'>
 						<ABanner />

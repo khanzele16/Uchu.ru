@@ -1,9 +1,9 @@
 import React from 'react'
 import moment from 'moment/min/moment-with-locales.min.js'
+import FullPLoading from '../../../Components/Other/Loading/FullPLoading'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchPost } from '../../Redux/Slices/postsSlice'
+import { fetchPost } from '../../../Redux/Slices/postsSlice'
 import './FullPost.css'
-import FullPLoading from '../../Components/Loading/FullPLoading'
 
 function FullPost() {
 	const postId = window.location.pathname.split('/')[2]

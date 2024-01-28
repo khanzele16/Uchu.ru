@@ -1,0 +1,17 @@
+.PageLoading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	width: 1500px;
+	height: 770px;
+}
+.PageLoading-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+.PageLoading-content img {
+  width: 70px;
+}

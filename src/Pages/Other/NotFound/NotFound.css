@@ -1,0 +1,29 @@
+.NotFound {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	width: 1500px;
+	height: 770px;
+	background: url('https://i.ibb.co/Qcc1f0J/page-not-found-2.png');
+}
+.NotFound-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	background-color: white;
+	padding: 15px 25px;
+	border: 1px solid #bebebe;
+}
+.NotFound-content #nf-error {
+	font-family: 'Montserrat';
+	font-size: 65px;
+	font-weight: bold;
+}
+.NotFound-content #nf-text {
+	font-family: 'Montserrat';
+	font-size: 25px;
+	font-weight: bold;
+}

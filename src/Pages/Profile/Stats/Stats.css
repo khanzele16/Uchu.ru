@@ -1,0 +1,15 @@
+.Stats {
+	width: 1500px;
+}
+.Stats-content {
+	margin: 20px 25px 25px 25px;
+}
+.Stats-content-title h2 {
+	font-size: 35px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+}
+.Stats-content-info {
+	display: flex;
+	align-content: ce
+}

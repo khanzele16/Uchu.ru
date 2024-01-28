@@ -1,11 +1,10 @@
 import React from 'react'
-import './Cookies.css'
-import { removeCookie } from '../../Redux/Slices/cookieSlice'
 import { useDispatch } from 'react-redux'
+import { removeCookie } from '../../../Redux/Slices/modalSlice'
+import './Cookies.css'
 
 function Cookies() {
-
-  const dispatch = useDispatch()
+	const dispatch = useDispatch()
 
 	return (
 		<div className='Cookies'>

@@ -1,6 +1,6 @@
 import React from 'react'
-import './KEGE.css'
 import { NavLink } from 'react-router-dom'
+import './KEGE.css'
 
 const catalogVariants = [{ _id: '4141423412451' }, ...new Array(17)]
 

@@ -15,12 +15,14 @@ const faqCatalog = [
 ]
 
 function FAQ() {
-	const [isAnswer, setIsAnswer] = React.useState(false)
+	const [isAnswer, setIsAnswer] = React.useState()
 	return (
 		<nav className='FAQ'>
 			{faqCatalog.map((el, index) => (
 				<li
-					onClick={() => setIsAnswer(index)}
+					onClick={() =>
+						isAnswer == index ? setIsAnswer('..') : setIsAnswer(index)
+					}
 					className={isAnswer == index ? 'active' : ''}
 					key={index}
 				>

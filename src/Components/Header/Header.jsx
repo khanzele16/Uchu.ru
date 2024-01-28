@@ -1,9 +1,9 @@
 import React from 'react'
+import HLoading from '../Other/Loading/HLoading'
 import { NavLink } from 'react-router-dom'
-import './Header.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getMe, logoutUser, selectorAuth } from '../../Redux/Slices/authSlice'
-import HLoading from '../Loading/HLoading'
+import './Header.css'
 
 const navigation = [
 	{
@@ -52,11 +52,13 @@ function Header() {
 		dispatch(getMe())
 	}, [])
 	React.useEffect(() => {
-		document.body.addEventListener('click', event => {
-			if (event.composedPath().includes(modalRef.current)) {
-				console.log('внутрь')
+		const handleSubmit = event => {
+			if (!event.composedPath().includes(modalRef.current)) {
+				setIsModal(false)
 			}
-		})
+		}
+		document.body.addEventListener('click', handleSubmit)
+		return () => document.body.removeEventListener('click', handleSubmit)
 	}, [])
 
 	return (
@@ -78,7 +80,11 @@ function Header() {
 					<HLoading />
 				</div>
 			) : isAuth ? (
-				<div onClick={() => setIsModal(!isModal)} className='Header-auth'>
+				<div
+					ref={modalRef}
+					onClick={() => setIsModal(!isModal)}
+					className='Header-auth'
+				>
 					<img src={user._doc.avatarUrl} alt='' />
 					<div className='Header-auth-info'>
 						<p>
@@ -87,7 +93,7 @@ function Header() {
 						<p id='auth-status'>Статус: {user._doc.status}</p>
 					</div>
 					{isModal && (
-						<div ref={modalRef} className='Header-modal'>
+						<div className='Header-modal'>
 							<ul className='Header-modal-catalog'>
 								{modalCatalog.map((el, index) => (
 									<NavLink to={el.path} key={index}>

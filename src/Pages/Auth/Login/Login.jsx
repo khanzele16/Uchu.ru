@@ -1,10 +1,10 @@
 import React from 'react'
-import { NavLink, Navigate } from 'react-router-dom'
-import './Login.css'
-import { useDispatch } from 'react-redux'
-import { loginUser } from '../../../Redux/Slices/authSlice'
-import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
+import { useDispatch } from 'react-redux'
+import { useForm } from 'react-hook-form'
+import { NavLink, Navigate } from 'react-router-dom'
+import { loginUser } from '../../../Redux/Slices/authSlice'
+import './Login.css'
 
 function Login() {
 	const [isShow, setIsShow] = React.useState(false)

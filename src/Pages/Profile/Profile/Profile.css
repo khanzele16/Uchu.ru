@@ -1,0 +1,106 @@
+.Profile {
+	width: 1500px;
+}
+.Profile-content {
+	margin: 20px 25px 25px 25px;
+}
+.Profile-content-title {
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	align-items: center;
+}
+.Profile-content-title h2 {
+	font-size: 35px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+}
+.Profile-content-title button {
+	border: none;
+	outline: none;
+	background-color: white;
+	transition: all 0.2s ease;
+	padding: 4px 10px;
+	cursor: pointer;
+}
+.Profile-content-title button a {
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 'Mulish';
+	color: black;
+}
+.Profile-content-title button:hover {
+	background-color: #4261ec;
+}
+.Profile-content-title button:hover > a {
+	color: white;
+}
+.Profile-content-form {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	margin: 30px 0;
+}
+.Profile-content-form img {
+	width: 240px;
+}
+.Profile-content-form-info {
+	display: flex;
+	align-content: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	margin: 0 0 0 20px;
+	height: 240px;
+}
+.Profile-content-form-info p {
+	font-family: 'Mulish';
+	font-size: 24px;
+}
+.Profile-content-form-info p b {
+	padding: 0 5px 0 0;
+}
+.Profile-content-stats {
+	display: flex;
+	flex-direction: column;
+}
+.Profile-content-stats h3 {
+	font-size: 30px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+}
+.Profile-content-stats-info {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	width: 100%;
+	margin: 15px 0;
+	height: 280px;
+	background-color: #e0e0e0;
+	font-size: 24px;
+	font-family: 'Mulish';
+	font-weight: bold;
+}
+.Profile-content-stats button {
+	font-family: 'Mulish';
+	font-weight: bold;
+	font-size: 18px;
+	padding: 4px 0;
+	outline: none;
+	border: none;
+	background-color: #4261ec;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.Profile-content-stats button:hover {
+	background-color: #415ee0;
+}
+.Profile-content-stats button:active {
+	background-color: rgb(50, 83, 228);
+}
+.Profile-content-stats button a {
+	font-family: 'Mulish';
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}

@@ -1,0 +1,43 @@
+.Edit {
+	width: 1500px;
+}
+.Edit-content {
+	margin: 20px 25px 25px 25px;
+	display: flex;
+	flex-direction: column;
+	height: 800px;
+}
+.Edit-content-title {
+	width: 100%;
+	display: flex;
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 0;
+	border-bottom: 1px solid #bebebe;
+}
+.Edit-content-title h2 {
+	font-size: 35px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+}
+.Edit-content-account {
+	display: flex;
+	flex-direction: column;
+}
+.Edit-content-account-title {
+	margin: 0 0 15px 0;
+}
+.Edit-content-account-title h2 {
+	font-size: 32px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+}
+.Edit-content-account-form {
+	display: flex;
+	flex-direction: column;
+}
+.Edit-content-account-form-image img{
+  width: 200px;
+}
+img {
+  width: 10px;
+}

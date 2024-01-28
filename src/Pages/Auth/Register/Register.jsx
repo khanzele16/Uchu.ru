@@ -1,10 +1,10 @@
 import React from 'react'
-import { NavLink, Navigate } from 'react-router-dom'
-import './Register.css'
+import toast from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
+import { NavLink, Navigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { registerUser, selectorAuth } from '../../../Redux/Slices/authSlice'
-import toast from 'react-hot-toast'
+import './Register.css'
 
 const statusCatalog = ['Ученик', 'Учитель']
 const genderCatalog = ['Мужской', 'Женский']
@@ -21,7 +21,7 @@ function Register() {
 	} = useForm()
 	const onSubmit = async data => {
 		const user = await dispatch(
-			registerUser({ status: isStatus, gender: isGender, data })
+			registerUser({ ...data, gender: isGender, status: isStatus })
 		)
 		if (!user.payload) {
 			return toast.error('Не удалось зарегистрироваться')
@@ -29,8 +29,8 @@ function Register() {
 			if (user.payload.token) {
 				window.localStorage.setItem('token', user.payload.token)
 				return toast.success(
-					`Вы зарегистрировались, ${user.payload.fio.split(' ')[0]} ${
-						user.payload.fio.split(' ')[1]
+					`Вы зарегистрировались, ${user.payload._doc.fio.split(' ')[0]} ${
+						user.payload._doc.fio.split(' ')[1]
 					}`
 				)
 			} else {

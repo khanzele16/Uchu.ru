@@ -1,10 +1,10 @@
 import React from 'react'
-import Post from '../../Components/Post/Post'
+import Post from '../../../Components/Post/Post'
+import PLoading from '../../../Components/Other/Loading/PLoading'
 import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchPosts } from '../../Redux/Slices/postsSlice'
+import { fetchPosts } from '../../../Redux/Slices/postsSlice'
 import './Blog.css'
-import PLoading from '../../Components/Loading/PLoading'
 
 const loadingArray = [...new Array(6)]
 

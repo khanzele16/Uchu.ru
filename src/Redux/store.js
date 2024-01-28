@@ -1,11 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit'
-import cookieSlice from './Slices/cookieSlice'
-import postsSlice from './Slices/postsSlice'
 import authSlice from './Slices/authSlice'
+import postsSlice from './Slices/postsSlice'
+import modalSlice from './Slices/modalSlice'
+import { configureStore } from '@reduxjs/toolkit'
 
 const store = configureStore({
 	reducer: {
-		cookie: cookieSlice,
+		modal: modalSlice,
 		posts: postsSlice,
 		auth: authSlice,
 	},
