@@ -5,9 +5,36 @@ import { useForm } from 'react-hook-form'
 import { logoutUser, updateUser } from '../../../Redux/Slices/authSlice'
 import toast from 'react-hot-toast'
 import { Navigate } from 'react-router-dom'
+import { changeTheme, changeWallpaper } from '../../../Redux/Slices/themeSlice'
 
 const statusCatalog = ['Ученик', 'Учитель']
 const genderCatalog = ['Мужской', 'Женский']
+const wallpapersCatalog = [
+	{
+		url: 'https://img.freepik.com/free-vector/paper-style-white-monochrome-background_52683-66443.jpg?w=996&t=st=1706806788~exp=1706807388~hmac=ee13ca11ad45602c1a29c22e3e32ef20d6e6c5eeaca6bcc46fdb6be59648b65b',
+		title: 'Обои #1',
+	},
+	{
+		url: 'https://img.freepik.com/free-vector/minimal-style-geometric-round-shape-blue-background_1017-45301.jpg?w=996&t=st=1706807186~exp=1706807786~hmac=b9a88e46ec799a7602432020f7f09ece910dae6a821d2905fa2ea40285f46a04',
+		title: 'Обои #2',
+	},
+	{
+		url: 'https://static.tildacdn.com/tild6239-3162-4137-a239-656163633333/14979252_SL_060521_4.jpg',
+		title: 'Обои #3',
+	},
+	{
+		url: 'https://sdelatsamkak.ru/wp-content/uploads/1/a/3/1a33f2d8dec114ff5a2f0771d9d14b4a.jpeg',
+		title: 'Обои #4',
+	},
+	{
+		url: 'https://img.freepik.com/free-vector/blue-bubble-patterned-background_53876-90685.jpg?w=996&t=st=1706808051~exp=1706808651~hmac=46a6abaca261a258b32f038b8fe937704483f3091254c31b8ce2169649f2632a',
+		title: 'Обои #5',
+	},
+	{
+		url: 'https://img.freepik.com/premium-vector/clean-minimalistic-blue-color-gradient-background-modern-simple-vibrant-backdrop_432495-430.jpg?w=996',
+		title: 'Обои #6',
+	},
+]
 
 function Edit() {
 	const user = useSelector(state => state.auth.data)
@@ -16,6 +43,8 @@ function Edit() {
 	const [isText, setIsText] = React.useState(user._doc.about)
 	const [isPassword, setIsPassword] = React.useState('')
 	const dispatch = useDispatch()
+	const theme = useSelector(state => state.theme.theme)
+	const wallpaper = useSelector(state => state.theme.wallpaper)
 	const {
 		register,
 		handleSubmit,
@@ -159,9 +188,50 @@ function Edit() {
 				</nav>
 				<nav className='Edit-content-tools'>
 					<div className='Edit-content-tools-title'>
-						<h2>Инструменты</h2>
+						<h2>Интерфейс</h2>
 					</div>
-					<div className='Edit-content-tools-'></div>
+					<nav className='Edit-content-tools-settings'>
+						<div className='Edit-content-tools-settings-theme'>
+							<div className='Edit-content-tools-settings-theme-title'>
+								<h3>Тема</h3>
+							</div>
+							<div
+								onClick={
+									theme == 'white'
+										? () => dispatch(changeTheme('black'))
+										: () => dispatch(changeTheme('white'))
+								}
+								id={theme == 'white' ? '' : 'theme-black-input'}
+								className='Edit-content-tools-settings-theme-input'
+							>
+								<div
+									className='Edit-content-tools-settings-theme-input-thumball'
+									id={theme == 'white' ? '' : 'theme-black-thumball'}
+								></div>
+							</div>
+						</div>
+						<div className='Edit-content-tools-settings-wallpapers'>
+							<div className='Edit-content-tools-settings-wallpapers-title'>
+								<h3>Обои</h3>
+							</div>
+							<ul className='Edit-content-tools-settings-wallpapers-catalog'>
+								{wallpapersCatalog.map((el, index) => (
+									<li key={index}>
+										<img src={el.url} alt='' />
+										<div id='wallpaper-post'>
+											<p>{el.title}</p>
+											<button
+												onClick={() => dispatch(changeWallpaper(el.url))}
+												id={el.url == wallpaper ? 'wallpaper-chosen' : ''}
+											>
+												{el.url == wallpaper ? 'Выбрано' : 'Выбрать'}
+											</button>
+										</div>
+									</li>
+								))}
+							</ul>
+						</div>
+					</nav>
 				</nav>
 			</div>
 		</div>

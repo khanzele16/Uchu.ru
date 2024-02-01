@@ -224,3 +224,112 @@
 	font-family: 'Montserrat';
 	font-weight: bold;
 }
+.Edit-content-tools-settings {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	height: 620px;
+}
+.Edit-content-tools-settings-theme {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	height: 80px;
+}
+.Edit-content-tools-settings-theme-input {
+	width: 50px;
+	height: 26px;
+	background-color: #d8d8d8;
+	border-radius: 20px;
+	position: relative;
+	transition: all 0.6s ease;
+	cursor: pointer;
+}
+.Edit-content-tools-settings-theme #theme-black-input {
+	background-color: #415ee0;
+}
+.Edit-content-tools-settings-theme-input-thumball {
+	background-color: white;
+	width: 26px;
+	height: 26px;
+	box-shadow: 0 0 4px 0 black;
+	border-radius: 20px;
+	transition: all 0.6s ease;
+}
+.Edit-content-tools-settings-theme-input #theme-black-thumball {
+	position: relative;
+	left: 24px;
+}
+.Edit-content-tools-settings-theme-title h3 {
+	font-family: 'Montserrat';
+	font-size: 28px;
+	font-weight: bold;
+}
+.Edit-content-tools-settings-wallpapers {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	height: 500px;
+}
+.Edit-content-tools-settings-wallpapers-catalog {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-row-gap: 30px;
+}
+.Edit-content-tools-settings-wallpapers-catalog li {
+	width: 200px;
+	border: 1px solid #bebebe;
+	border-radius: 10px;
+	position: relative;
+}
+.Edit-content-tools-settings-wallpapers-catalog li img {
+	width: 200px;
+	height: 125px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom: 1px solid #bebebe;
+}
+.Edit-content-tools-settings-wallpapers-catalog #wallpaper-post {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	height: 70px;
+	margin: 0 auto;
+	bottom: 3px;
+	position: relative;
+}
+.Edit-content-tools-settings-wallpapers-catalog #wallpaper-post p {
+	font-family: 'Mulish';
+	font-size: 19px;
+	font-weight: bold;
+	margin: 0 auto;
+}
+.Edit-content-tools-settings-wallpapers-catalog #wallpaper-post button {
+	padding: 3px 8px;
+	margin: 4px 0;
+	margin: 0 auto;
+	border: none;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: 'Mulish';
+	color: white;
+	background-color: #4261ec;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.Edit-content-tools-settings-wallpapers-catalog #wallpaper-post button:hover {
+	background-color: #415ee0;
+}
+.Edit-content-tools-settings-wallpapers-catalog #wallpaper-post button:active {
+	background-color: rgb(50, 83, 228);
+}
+.Edit-content-tools-settings-wallpapers-title h3 {
+	font-family: 'Montserrat';
+	font-size: 28px;
+	font-weight: bold;
+}
+#wallpaper-post #wallpaper-chosen {
+	background-color: #858585;
+	
+}
