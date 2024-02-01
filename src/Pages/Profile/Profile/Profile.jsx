@@ -35,7 +35,7 @@ const Profile = () => {
 						</p>
 						<p id='profile-about'>
 							<b>Описание:</b>
-							{user._doc.about}
+							{user._doc.about == '' ? 'Нет' : user._doc.about}
 						</p>
 					</div>
 				</div>

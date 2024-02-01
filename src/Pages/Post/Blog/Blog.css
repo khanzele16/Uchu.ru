@@ -36,3 +36,20 @@
 	max-width: 410px;
 	max-height: 308px;
 }
+.Blog-content-error {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 650px;
+}
+.Blog-content-error p {
+	margin: 20px 0 0 0;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	font-size: 20px;
+}
+.Blog-content-error img {
+	width: 270px;
+}

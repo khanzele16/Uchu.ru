@@ -21,6 +21,15 @@ function Blog() {
 				<div className='Blog-content-title'>
 					<h2>Наш Блог</h2>
 				</div>
+				{status == 'error' && (
+					<div className='Blog-content-error'>
+						<img
+							src='https://media1.tenor.com/m/TUJ_WGkQ6pcAAAAC/dog-computer.gif'
+							alt=''
+						/>
+						<p>Произошла какая-то ошибка, попробуйте загрузить эту страницу чуть позже...</p>
+					</div>
+				)}
 				<ul className='Blog-content-catalog'>
 					{status == 'loading'
 						? loadingArray.map((el, index) => (

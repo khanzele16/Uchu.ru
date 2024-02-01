@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast'
 import axios from './../../axios.js'
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
@@ -10,6 +11,14 @@ export const registerUser = createAsyncThunk(
 	'data/registerUser',
 	async params => {
 		const { data } = await axios.post('/auth/register', params)
+		return data
+	}
+)
+
+export const updateUser = createAsyncThunk(
+	'update/updateUser',
+	async params => {
+		const { data } = await axios.post('/auth/update', params)
 		return data
 	}
 )

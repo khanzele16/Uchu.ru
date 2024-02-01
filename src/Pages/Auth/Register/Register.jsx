@@ -1,16 +1,15 @@
 import React from 'react'
 import toast from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
-import { NavLink, Navigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { registerUser, selectorAuth } from '../../../Redux/Slices/authSlice'
+import { NavLink } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { registerUser } from '../../../Redux/Slices/authSlice'
 import './Register.css'
 
 const statusCatalog = ['Ученик', 'Учитель']
 const genderCatalog = ['Мужской', 'Женский']
 
 function Register() {
-	const isAuth = useSelector(selectorAuth)
 	const [isStatus, setIsStatus] = React.useState('Ученик')
 	const [isGender, setIsGender] = React.useState('Мужской')
 	const dispatch = useDispatch()

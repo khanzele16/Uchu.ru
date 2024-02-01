@@ -5,14 +5,11 @@
 	margin: 20px 25px 25px 25px;
 	display: flex;
 	flex-direction: column;
-	height: 800px;
+	height: 1000px;
 }
 .Edit-content-title {
 	width: 100%;
 	display: flex;
-	margin: 0 0 15px 0;
-	padding: 0 0 15px 0;
-	border-bottom: 1px solid #bebebe;
 }
 .Edit-content-title h2 {
 	font-size: 35px;
@@ -22,9 +19,9 @@
 .Edit-content-account {
 	display: flex;
 	flex-direction: column;
-}
-.Edit-content-account-title {
-	margin: 0 0 15px 0;
+	margin: 15px 0 0 0;
+	padding: 15px 0 0 0;
+	border-top: 1px solid #bebebe;
 }
 .Edit-content-account-title h2 {
 	font-size: 32px;
@@ -34,10 +31,196 @@
 .Edit-content-account-form {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-evenly;
+	height: 770px;
 }
-.Edit-content-account-form-image img{
-  width: 200px;
+.Edit-content-account-form-gender {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 280px;
+	height: 38px;
+	border-radius: 3px;
+	background-color: rgb(206, 206, 206);
 }
-img {
-  width: 10px;
+.Edit-content-account-form-gender li {
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-size: 16px;
+	margin: 0 auto;
+	cursor: pointer;
+	padding: 5px 25px;
+	border-radius: 2px;
+	transition: all 0.2s ease;
+	cursor: not-allowed;
+}
+.Edit-content-account-form-gender .active-gender {
+	background-color: rgb(253, 253, 253);
+	box-shadow: 0 0 2px 0 rgb(65, 65, 65);
+}
+.Edit-content-account-form-status {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 280px;
+	height: 38px;
+	border-radius: 3px;
+	background-color: rgb(206, 206, 206);
+}
+.Edit-content-account-form-status li {
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-size: 16px;
+	margin: 0 auto;
+	cursor: pointer;
+	padding: 5px 30px;
+	transition: all 0.2s ease;
+	border-radius: 2px;
+	cursor: not-allowed;
+}
+.Edit-content-account-form-status .active-status {
+	background-color: rgb(253, 253, 253);
+	box-shadow: 0 0 2px 0 rgb(65, 65, 65);
+}
+.Edit-content-account-form-image img {
+	width: 260px;
+}
+#change-email {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	width: 340px;
+	height: 37px;
+	background-color: #f3f3f3;
+	position: relative;
+	cursor: not-allowed;
+}
+#change-email img {
+	width: 25px;
+	padding: 0 8px 0 0;
+	cursor: not-allowed;
+}
+#change-email input {
+	border: none;
+	outline: none;
+	font-family: 'Mulish';
+	width: 280px;
+	font-size: 18px;
+	cursor: not-allowed;
+}
+#change-fio {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	width: 340px;
+	height: 37px;
+	background-color: #f3f3f3;
+	position: relative;
+	cursor: not-allowed;
+}
+#change-fio img {
+	width: 22px;
+	padding: 0 8px 0 0;
+	cursor: not-allowed;
+}
+#change-fio input {
+	border: none;
+	outline: none;
+	font-family: 'Mulish';
+	width: 280px;
+	font-size: 18px;
+	cursor: not-allowed;
+}
+#change-password {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	width: 340px;
+	height: 37px;
+	background-color: white;
+	position: relative;
+}
+#change-password img {
+	width: 25px;
+	padding: 0 8px 0 0;
+}
+#change-password input {
+	border: none;
+	outline: none;
+	font-family: 'Mulish';
+	width: 280px;
+	font-size: 18px;
+}
+.Edit-content-account-form-password-error {
+	color: red;
+	font-size: 12px;
+	width: 265px;
+	font-family: 'Montserrat';
+	background-color: white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: absolute;
+	padding: 5px 8px;
+	bottom: 0;
+	right: -300px;
+	border: 1px solid #929292;
+}
+.Edit-content-account-form-about textarea {
+	width: 400px;
+	height: 120px;
+	resize: none;
+	outline: none;
+	font-family: 'Montserrat';
+	font-size: 16px;
+	padding: 6px 8px;
+}
+.Edit-content-account-form-about-error {
+	color: red;
+}
+.Edit-content-account-form button {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Mulish';
+	border: none;
+	border-radius: 5px;
+	color: white;
+	background-color: #4261ec;
+	padding: 6px 14px;
+	cursor: pointer;
+	width: 180px;
+}
+.Edit-content-account-form button:hover {
+	background-color: #415ee0;
+}
+.Edit-content-account-form button:active {
+	background-color: rgb(50, 83, 228);
+}
+.Edit-content-tools {
+	display: flex;
+	flex-direction: column;
+	margin: 15px 0 0 0;
+	padding: 15px 0 0 0;
+	border-top: 1px solid #bebebe;
+}
+.Edit-content-tools-title h2 {
+	font-size: 32px;
+	font-family: 'Montserrat';
+	font-weight: bold;
 }
