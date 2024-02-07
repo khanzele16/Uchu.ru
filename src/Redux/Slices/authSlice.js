@@ -1,4 +1,3 @@
-import toast from 'react-hot-toast'
 import axios from './../../axios.js'
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 

@@ -1,0 +1,22 @@
+.Theory {
+	width: 1500px;
+}
+.Theory-content {
+	margin: 20px 25px 25px 25px;
+}
+.Theory-content-title h2 {
+	font-size: 35px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+}
+.Theory-content-catalog {
+	display: flex;
+	align-content: center;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+  height: 750px;
+}
+.Theory-content-catalog li {
+  width: 1450px;
+}

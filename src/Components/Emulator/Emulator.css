@@ -3,6 +3,7 @@
 	align-content: center;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	width: 100vw;
 	margin: 0 auto;
 }
@@ -21,6 +22,7 @@
 	font-family: 'Montserrat';
 	font-size: 40px;
 	color: #ffffff;
+	cursor: pointer;
 }
 .Emulator-header-title h1 span {
 	color: rgb(0, 230, 0);
@@ -63,4 +65,26 @@
 }
 .Emulator-header-menu button:hover {
 	background-color: rgb(255, 80, 80);
+}
+.Emulator-content {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+}
+.Emulator-content-main {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+.Emulator-content-sidebar {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 250px;
+	height: 100px;
 }

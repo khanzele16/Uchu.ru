@@ -1,7 +1,7 @@
 import React from 'react'
 import toast from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { registerUser } from '../../../Redux/Slices/authSlice'
 import './Register.css'
@@ -18,6 +18,7 @@ function Register() {
 		handleSubmit,
 		formState: { errors },
 	} = useForm()
+	const navigate = useNavigate()
 	const onSubmit = async data => {
 		const user = await dispatch(
 			registerUser({ ...data, gender: isGender, status: isStatus })
@@ -27,11 +28,12 @@ function Register() {
 		} else {
 			if (user.payload.token) {
 				window.localStorage.setItem('token', user.payload.token)
-				return toast.success(
+				toast.success(
 					`Вы зарегистрировались, ${user.payload._doc.fio.split(' ')[0]} ${
 						user.payload._doc.fio.split(' ')[1]
 					}`
 				)
+				return navigate('/profile')
 			} else {
 				return toast.error('Не удалось зарегистрироваться')
 			}

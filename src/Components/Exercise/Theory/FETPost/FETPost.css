@@ -1,0 +1,40 @@
+.FETPost {
+	width: 1500px;
+}
+.FETPost-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 20px 25px 25px 25px;
+}
+.FETPost-content-title {
+	margin: 0 0 10px 0;
+}
+.FETPost-content-title h2 {
+	font-size: 35px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+}
+.FETPost-content-text p {
+	font-family: 'Mulish';
+	font-size: 18px;
+}
+.FETPost-content-video-catalog {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 5px;
+	grid-row-gap: 20px;
+	width: 1300px;
+}
+.FETPost-content-video-catalog li {
+	width: 560px;
+}
+.FETPost-content-video-title {
+	margin: 20px 0;
+}
+.FETPost-content-video-title h4 {
+	font-size: 26px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+}

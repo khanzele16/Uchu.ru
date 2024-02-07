@@ -1,14 +1,14 @@
 import React from 'react'
-import './APanel.css'
+import './Ad.css'
 
-function APanel() {
+function Ad() {
 	return (
-		<div className='APanel'>
-			<div className='APanel-content'>
+		<div className='Ad'>
+			<div className='Ad-content'>
 				<p>Здесь может быть ваша реклама</p>
 			</div>
 		</div>
 	)
 }
 
-export default APanel
+export default Ad

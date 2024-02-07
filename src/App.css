@@ -26,36 +26,28 @@ body {
 	grid-template-rows: 1fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
-	height: 900px;
+	max-height: 905px;
+	max-width: 1800px;
 }
 .App-content-panel {
 	max-width: 300px;
-	height: 900px;
+	height: 905px;
 	border-right: 1px solid #bebebe;
 }
 .App-content-inner {
-	max-width: 1500px;
-}
-.App-content-inner-main {
+	width: 1500px;
 	background-color: white;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	height: 770px;
+	height: 905px;
 	word-break: normal;
 }
-.App-content-inner-main::-webkit-scrollbar {
+.App-content-inner::-webkit-scrollbar {
 	width: 5px;
 }
-.App-content-inner-main::-webkit-scrollbar-track {
+.App-content-inner::-webkit-scrollbar-track {
 	background: rgb(204, 204, 204);
 }
-.App-content-inner-main::-webkit-scrollbar-thumb {
+.App-content-inner::-webkit-scrollbar-thumb {
 	background-color: #4866eb;
 }
-.App-content-inner-banner {
-	max-height: 129px;
-	border-top: 1px solid #bebebe;
-}
-/*
-Белая 3 - https://static.tildacdn.com/tild6239-3162-4137-a239-656163633333/14979252_SL_060521_4.jpg
-*/

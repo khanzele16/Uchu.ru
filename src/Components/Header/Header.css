@@ -21,7 +21,7 @@
 	justify-content: space-evenly;
 	align-items: center;
 	align-content: center;
-	width: 600px;
+	width: 800px;
 }
 .Header-menu li {
 	color: black;
@@ -29,6 +29,10 @@
 	font-family: 'Montserrat';
 	font-weight: bold;
 	transition: all 0.3s ease;
+	position: relative;
+}
+.Header-menu li:hover {
+	color: #4261ec;
 }
 .Header-menu .active li {
 	color: #4261ec;

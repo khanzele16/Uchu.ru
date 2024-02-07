@@ -1,13 +1,20 @@
-.ABanner {
+.Ad {
 	display: flex;
 	align-content: center;
 	justify-content: center;
 	align-items: center;
 	background-color: white;
-	width: 1500px;
-	height: 129px;
+	width: 300px;
+	height: 905px;
 }
-.ABanner-content p {
+.Ad-content {
+  width: 150px;
+  padding: 12px 10px;
+  word-break: normal;
+  border: 1px solid #bebebe;
+  text-align: center;
+}
+.Ad-content p {
   font-family: 'Montserrat';
   font-size: 18px;
   font-weight: bold;

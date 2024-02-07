@@ -4,11 +4,11 @@ import PLoading from '../../../Components/Other/Loading/PLoading'
 import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchPosts } from '../../../Redux/Slices/postsSlice'
-import './Blog.css'
+import './News.css'
 
-const loadingArray = [...new Array(6)]
+const loadingArray = [...new Array(9)]
 
-function Blog() {
+function News() {
 	const { postsData, status } = useSelector(state => state.posts.posts)
 	const dispatch = useDispatch()
 	React.useEffect(() => {
@@ -16,21 +16,24 @@ function Blog() {
 	}, [])
 
 	return (
-		<div className='Blog'>
-			<nav className='Blog-content'>
-				<div className='Blog-content-title'>
-					<h2>Наш Блог</h2>
+		<div className='News'>
+			<nav className='News-content'>
+				<div className='News-content-title'>
+					<h2>Новости</h2>
 				</div>
 				{status == 'error' && (
-					<div className='Blog-content-error'>
+					<div className='News-content-error'>
 						<img
 							src='https://media1.tenor.com/m/TUJ_WGkQ6pcAAAAC/dog-computer.gif'
 							alt=''
 						/>
-						<p>Произошла какая-то ошибка, попробуйте загрузить эту страницу чуть позже...</p>
+						<p>
+							Произошла какая-то ошибка, попробуйте загрузить эту страницу чуть
+							позже...
+						</p>
 					</div>
 				)}
-				<ul className='Blog-content-catalog'>
+				<ul className='News-content-catalog'>
 					{status == 'loading'
 						? loadingArray.map((el, index) => (
 								<li key={index}>
@@ -38,7 +41,7 @@ function Blog() {
 								</li>
 						  ))
 						: postsData.map((el, index) => (
-								<NavLink to={'/blog/' + el._id} key={index}>
+								<NavLink to={'/news/' + el._id} key={index}>
 									<li className='mini-post-content'>
 										<Post element={el} />
 									</li>
@@ -50,4 +53,4 @@ function Blog() {
 	)
 }
 
-export default Blog
+export default News

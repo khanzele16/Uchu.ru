@@ -2,17 +2,15 @@ import React from 'react'
 import toast from 'react-hot-toast'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
-import { NavLink, Navigate } from 'react-router-dom'
+import { NavLink, Navigate, useNavigate } from 'react-router-dom'
 import { loginUser } from '../../../Redux/Slices/authSlice'
 import './Login.css'
 
 function Login() {
 	const [isShow, setIsShow] = React.useState(false)
-	const {
-		register,
-		handleSubmit,
-	} = useForm()
+	const { register, handleSubmit } = useForm()
 	const dispatch = useDispatch()
+	const navigate = useNavigate()
 	const onSubmit = async data => {
 		const user = await dispatch(loginUser(data))
 		if (!user.payload) {
@@ -25,7 +23,7 @@ function Login() {
 						user.payload._doc.fio.split(' ')[0]
 					} ${user.payload._doc.fio.split(' ')[1]}`
 				)
-				return <Navigate to='/kege' />
+				return navigate('/profile')
 			} else {
 				return toast.error('Не удалось авторизоваться')
 			}

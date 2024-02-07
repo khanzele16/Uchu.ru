@@ -3,20 +3,19 @@
 	align-content: center;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	width: 1500px;
-	word-break: normal;
+	height: 905px;
 }
 .FAQ li .FAQ-answer {
 	display: none;
 	transition: all 0.4s ease;
 	opacity: 0;
 }
+.FAQ li {
+	border-left: 1px solid #bebebe;
+	border-right: 1px solid #bebebe;
+}
 .FAQ .active .FAQ-question img {
 	transition: all 0.4s ease;
-}
-.FAQ .active .FAQ-question {
-	border-top: none;
 }
 .FAQ .active .FAQ-answer {
 	display: flex;
@@ -29,11 +28,44 @@
 .FAQ .active .FAQ-question img {
 	transform: rotate(180deg);
 }
+.FAQ-content {
+	border-radius: 10px;
+	width: 1000px;
+	word-break: normal;
+	height: 800px;
+}
+.FAQ li:first-child {
+	border-top: 1px solid #bebebe;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
 .FAQ li:first-child .FAQ-question {
-	border-top: none;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+.FAQ li:last-child .FAQ-question {
+	border-left: 1px solid #bebebe;
+	border-right: 1px solid #bebebe;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.FAQ .active .FAQ-question {
+	border-bottom-left-radius: none;
+	border-bottom-right-radius: none;
+}
+.FAQ li:last-child {
+	border-left: none;
+	border-right: none;
 }
 .FAQ li:last-child .FAQ-answer {
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 	border-bottom: 1px solid #bebebe;
+	border-left: 1px solid #bebebe;
+	border-right: 1px solid #bebebe;
+}
+.FAQ li:first-child .FAQ-question {
+	border-top: none;
 }
 .FAQ-question {
 	display: flex;
@@ -41,21 +73,23 @@
 	justify-content: center;
 	align-content: center;
 	flex-direction: row;
-	width: 1500px;
+	width: 1000px;
 	text-align: center;
 	padding: 8px 0;
 	border-top: 1px solid #bebebe;
 	border-bottom: 1px solid #bebebe;
 	position: relative;
 	cursor: pointer;
+	background-color: #516deb;
+	color: white;
 }
 .FAQ-question p {
 	font-family: 'Montserrat';
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: bold;
 }
 .FAQ-question img {
-	width: 25px;
+	width: 18px;
 	position: absolute;
 	right: 15px;
 }
