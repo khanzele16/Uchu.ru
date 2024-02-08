@@ -35,20 +35,6 @@
 	text-align: center;
 	color: white;
 }
-.Main-header-title img {
-	width: 40px;
-	position: relative;
-	top: 50px;
-	animation: downArrow 0.5s ease-in alternate-reverse infinite;
-}
-@keyframes downArrow {
-	from {
-		top: 45px;
-	}
-	to {
-		top: 50px;
-	}
-}
 .Main-news {
 	padding: 10px;
 }

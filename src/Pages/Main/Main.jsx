@@ -47,10 +47,6 @@ function Main() {
 						На данном сайте предоставлен интерфейс, помогающий детям получать
 						теорию, практиковаться и выполнять домашнюю работу.
 					</p>
-					<img
-						src='https://i.ibb.co/bs7V7NB/arrow-down-sign-to-navigate.png'
-						alt=''
-					/>
 				</div>
 			</div>
 			<div className='Main-variants'>
@@ -63,7 +59,7 @@ function Main() {
 					<div className='Main-variants-content-exercise'>
 						<ul className='Main-variants-content-exercise-catalog'>
 							{exerciseCatalog.map((el, index) => (
-								<NavLink key={index} to={`./${el.path}`}>
+								<NavLink key={index} to={`/practice/${el.path}`}>
 									<li>
 										<EPPost {...el} view='main' />
 									</li>
@@ -90,7 +86,7 @@ function Main() {
 					<div className='Main-theory-content-exercise'>
 						<ul className='Main-theory-content-exercise-catalog'>
 							{theoryExercise.map((el, index) => (
-								<NavLink key={index} to={`./${el.path}`}>
+								<NavLink key={index} to={`/theory/${el.path}`}>
 									<li>
 										<ETPost {...el} view='main' />
 									</li>

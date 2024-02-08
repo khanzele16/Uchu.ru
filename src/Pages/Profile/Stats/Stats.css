@@ -9,17 +9,24 @@
 	font-family: 'Montserrat';
 	font-weight: bold;
 }
-.Stats-content-info {
+.Stats-content-title {
+	margin: 0 0 15px 0;
+}
+#with-results {
+	background-color: white;
+}
+#without-results {
 	display: flex;
 	align-content: center;
 	justify-content: center;
 	align-items: center;
-	height: 650px;
-	background-color: #bebebe;
+	height: 800px;
+	background-color: #4261ec;
 	margin: 10px 0;
 }
 .Stats-content-info p {
 	font-size: 24px;
 	font-family: 'Montserrat';
 	font-weight: bold;
+	color: white;
 }

@@ -8,18 +8,21 @@ import {
 	setExercise,
 } from '../../../../../Redux/Slices/exerciseSlice'
 import ContentLoader from 'react-content-loader'
+import moment from 'moment'
 
 function Task({ ...el }) {
 	const dispatch = useDispatch()
 	const isAuth = useSelector(selectorAuth)
 	const [textValue, setTextValue] = React.useState('')
 	const [isButton, setIsButton] = React.useState(false)
+	const [isAnswer, setIsAnswer] = React.useState('')
 	React.useEffect(() => {
 		dispatch(getResult(el.id))
 	}, [isButton])
 	const result = useSelector(state => state.exercise.result?.data)
 	const status = useSelector(state => state.exercise.result.status)
 	const [isActive, setIsActive] = React.useState(false)
+	console.log(isAnswer)
 	const onSubmit = async () => {
 		if (isAuth) {
 			if (result?.result == 'right') {
@@ -29,14 +32,14 @@ function Task({ ...el }) {
 					setExercise({
 						id: el.id,
 						result: el.answer == textValue ? 'right' : 'bad',
+						answer: textValue,
+						createdAt: moment(),
 					})
 				)
 				setIsButton(!isButton)
 			}
 		} else {
-			toast.error(
-				'Вы не авторизованы. Для того, чтобы решать задания нужно авторизоваться'
-			)
+			await setIsAnswer(el.answer == textValue ? 'right' : 'bad')
 		}
 	}
 	return (
@@ -57,9 +60,15 @@ function Task({ ...el }) {
 			) : (
 				<div
 					style={
-						result?.result == 'right'
+						isAuth
+							? result?.result == 'right'
+								? { backgroundColor: '#32CD32' }
+								: result?.result == 'bad'
+								? { backgroundColor: 'red' }
+								: {}
+							: isAnswer == 'right'
 							? { backgroundColor: '#32CD32' }
-							: result?.result == 'bad'
+							: isAnswer == 'bad'
 							? { backgroundColor: 'red' }
 							: {}
 					}

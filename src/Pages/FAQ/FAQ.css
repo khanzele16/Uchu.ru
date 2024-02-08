@@ -5,6 +5,13 @@
 	align-items: center;
 	height: 905px;
 }
+.FAQ-content {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
 .FAQ li .FAQ-answer {
 	display: none;
 	transition: all 0.4s ease;
