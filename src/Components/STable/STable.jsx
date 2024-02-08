@@ -1,7 +1,7 @@
 import React from 'react'
 import SPost from './SPost/SPost'
 import { useDispatch, useSelector } from 'react-redux'
-import { getResults } from '../../Redux/Slices/exerciseSlice'
+
 
 function STable() {
 	const dispatch = useDispatch()
