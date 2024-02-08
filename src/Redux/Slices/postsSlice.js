@@ -29,27 +29,27 @@ const postsSlice = createSlice({
 	extraReducers: builder => {
 		builder.addCase(fetchPosts.pending, state => {
 			state.posts.postsData = []
-			state.posts.status = 'loading'
+			return (state.posts.status = 'loading')
 		}),
 			builder.addCase(fetchPosts.fulfilled, (state, action) => {
 				state.posts.postsData = action.payload
-				state.posts.status = 'loaded'
+				return (state.posts.status = 'loaded')
 			}),
 			builder.addCase(fetchPosts.rejected, state => {
 				state.posts.postsData = []
-				state.posts.status = 'error'
+				return (state.posts.status = 'error')
 			})
 		builder.addCase(fetchPost.pending, state => {
 			state.post.postData = []
-			state.post.status = 'loading'
+			return (state.post.status = 'loading')
 		}),
 			builder.addCase(fetchPost.fulfilled, (state, action) => {
 				state.post.postData = action.payload
-				state.post.status = 'loaded'
+				return (state.post.status = 'loaded')
 			}),
 			builder.addCase(fetchPost.rejected, state => {
 				state.post.postData = []
-				state.post.status = 'error'
+				return (state.post.status = 'error')
 			})
 	},
 })
